@@ -1,0 +1,99 @@
+File functioning
+process.py open/close operation, store it into the folder
+
+
+
+
+p20 whats the meanings of parameters
+especially the pixel
+
+_get_neighbors : split the image into mesh
+get the coordinate of neighbour pixels
+
+deque 双向队列 similar to the "list"
+
+p33 return a new array , inited by the "self.INIT"
+np.full(shape, value, date_type, *****)
+
+coordinates : pairs of pixel
+
+p40 pixel has become a array N*2
+
+p43 ? why reshape the neighbours
+
+p50 argsort: return the sorted index of array_elements
+
+p50-53 get the sorted indices, the change the image into sorted 
+stored into sorted_image and sorted_pixels
+p51 the pixels of each node
+p52 the coordinates of each node
+
+p60-65 level_indices stores the coordinates of the begin of each level 
+
+p68 traverse each level (note the change of start_index and end_index)
+
+p74-78 ???
+
+p80-100 {
+    mask: can be promoted still
+    wshd: basins
+    inqe: ?
+}
+
+main() {
+    plt.figure() // set the size of canvas
+    
+    plt.imshow
+    参数：数据， 颜色维度， 插值方法
+}
+
+imshow() # https://blog.csdn.net/a892573486/article/details/107542839
+    
+    plt.imshow(
+        X,
+        cmap=None,
+        norm=None,
+        aspect=None,
+        interpolation=None,
+        alpha=None,
+        vmin=None,
+        vmax=None,
+        origin=None,
+        extent=None,
+        shape=None,
+        filternorm=1,
+        filterrad=4.0,
+        imlim=None,
+        resample=None,
+        url=None,
+        *,
+        data=None,
+        **kwargs,
+    )
+
+l19 np.pad()
+Fill with edge, (1, 1)means one more parameters of this page each dimension
+
+imsave（） 函数 
+name ：文件名或者文件名加目录
+arr：np-array的矩阵，MxN or MxNx3 or MxNx4这三种格式，分别对应灰度图像，RGB图像和RGB+alpha图像
+format ：str型，图像输出的类型，省略的话，图片直接输出图片的扩展名。
+
+opencv形态学操作
+https://blog.csdn.net/qrbbqrbb/article/details/85139474
+
+iterations 迭代次数
+
+原理
+https://blog.csdn.net/aliyanah_/article/details/75257694
+
+
+
+    ind = 7#距离精度, 越大精度越大
+    discrepance = 50 # 膨胀 误差大小
+    discrepance2 = 10 # 腐蚀 误差大小
+
+三种误差，
+ind : 细胞大小越相似， 越大
+dis1 : 细胞越大，越大 
+dis2 : 细胞越小，越小
